@@ -19,6 +19,7 @@ jobs:
     - name: Verify Terraform version
       run: |
         cd learn-terraform-aws-instance
+        ls
         terraform --version
 
     - name: Terraform init
