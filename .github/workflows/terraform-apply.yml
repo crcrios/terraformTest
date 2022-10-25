@@ -26,7 +26,9 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: terraform init -input=false
+      run: |
+        cd learn-terraform-aws-instance
+        terraform init -input=false
 
     - name: Terraform validation
       run: terraform validate
@@ -35,4 +37,6 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: terraform apply -auto-approve -input=false
+      run: |
+        cd learn-terraform-aws-instance
+        terraform apply -auto-approve -input=false
