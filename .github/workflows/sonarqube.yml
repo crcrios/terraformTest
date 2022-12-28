@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       appName:
-        description: 'app name for image tag name' 
+        description: '' 
         required: true
   # schedule:
   #   - cron: "0 4 * * *" # run once a day at 4 AM

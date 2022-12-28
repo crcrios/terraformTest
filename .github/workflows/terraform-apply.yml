@@ -1,6 +1,11 @@
 name: Terraform Apply
 
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      appName:
+        description: '' 
+        required: true
 
 jobs:
   terraform_apply:
